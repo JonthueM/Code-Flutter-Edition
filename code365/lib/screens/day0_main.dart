@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './day00_switch.dart';
 import './day0000_hire_me.dart';
+import './day1_intro.dart';
 
 class DayZeroMain extends StatelessWidget {
   const DayZeroMain({super.key});
@@ -26,7 +27,11 @@ class DayZeroMain extends StatelessWidget {
         ),
         ),
       body:Center(
-        child: Text('Hello World'), 
+        child: Column(
+          children: const [
+            DayOneIntro(),
+          ],
+        ), 
       ),
     );
   }
