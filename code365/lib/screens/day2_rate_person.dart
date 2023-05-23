@@ -22,8 +22,46 @@ class RateRandom extends StatefulWidget {
 }
 
 class _RateRandomState extends State<RateRandom> {
+
+  final RandomName = TextEditingController();
+  var Rating = TextEditingController();
+  
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  Center(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              TextField(
+                decoration: InputDecoration(
+                  hintText: 'Name of Random Person',
+                  labelText: 'Name of Random Person',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  prefixIcon: const Icon(Icons.person),
+                ),
+              )
+            ],
+          ),
+          Row(
+            children: [
+
+            ],
+          ),
+          Row(
+            children: [
+
+            ],
+          ),
+          Row(
+            children: [
+
+            ],
+          )
+        ],
+      ),
+    );
   }
 }
