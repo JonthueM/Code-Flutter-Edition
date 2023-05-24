@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:animated_emoji/animated_emoji.dart';
 
 class Day2Portal extends StatelessWidget {
-  const Da23Portal({super.key});
+  const Day2Portal({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +24,23 @@ class RateRandom extends StatefulWidget {
 
 class _RateRandomState extends State<RateRandom> {
 
-  final RandomName = TextEditingController();
-  var Rating = TextEditingController();
+  var randomName = TextEditingController();
+  var rating = TextEditingController();
+  int counter = 0;
   
+
+  void _incrememtRate() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  void _reduceRate(){
+    setState(() {
+      counter--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return  Center(
@@ -34,6 +49,7 @@ class _RateRandomState extends State<RateRandom> {
           Row(
             children: [
               TextField(
+                controller: randomName,
                 decoration: InputDecoration(
                   hintText: 'Name of Random Person',
                   labelText: 'Name of Random Person',
@@ -47,6 +63,23 @@ class _RateRandomState extends State<RateRandom> {
           ),
           Row(
             children: [
+                Text(randomName as String),
+                TextField(
+                  controller: rating,
+                  decoration: InputDecoration(
+                    hintText: 'Any Number',
+                    labelText: 'Any Number',
+                  ),
+                ),
+                TextButton(
+                  onPressed: _incrememtRate,
+                  child:Text('+')
+                  ),
+                  TextButton(
+                    onPressed: _reduceRate,
+                    child: Text('-')
+                    ),
+                    Text(counter as String),
 
             ],
           ),
@@ -56,8 +89,10 @@ class _RateRandomState extends State<RateRandom> {
             ],
           ),
           Row(
-            children: [
-
+            children: [  
+                Text(
+                  (counter == 0) ? "You have $randomName given no rating" : (counter > 0) ? " You have giveb $randomName a positive rating of " :  (counter < 0) ? " You have given $randomName a negative rating of ";
+                )
             ],
           )
         ],
