@@ -15,10 +15,32 @@ class AreYouLegalToDrinkFederally extends StatelessWidget {
 }
 
 class FederalDrinkAgeChecker extends StatelessWidget {
-  const FederalDrinkAgeChecker({super.key});
+
+  final _ageController = TextEditingController();
+  int ageValue = int.parse(_ageController.text);
+
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Center(
+      child: Column(
+        children: [
+          Text(
+            'Are You Legal to Drink?'
+          ),
+          TextField(
+            decoration: InputDecoration(
+              hintText: 'Your Age!',
+              labelText: 'Your Age!'
+            ),
+            ),
+            Text(
+              if(ageController.int <21){
+
+              }
+            )
+        ],
+      ),
+    );
   }
 }
