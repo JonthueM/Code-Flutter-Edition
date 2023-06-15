@@ -17,11 +17,11 @@ class AreYouLegalToDrinkFederally extends StatelessWidget {
 class FederalDrinkAgeChecker extends StatelessWidget {
 
   final _ageController = TextEditingController();
-  int ageValue = int.parse(_ageController.text);
-
 
   @override
   Widget build(BuildContext context) {
+      int ageValue = int.parse(_ageController.text);
+      int yearsLeft = ageValue - 21;
     return const Center(
       child: Column(
         children: [
@@ -35,8 +35,11 @@ class FederalDrinkAgeChecker extends StatelessWidget {
             ),
             ),
             Text(
-              if(ageController.int <21){
-
+              if(ageValue > 21){
+                  "Your not old enough, come back in $yearsLeft";
+              }
+              else{
+                  "Boss Your Good to Go!"
               }
             )
         ],
