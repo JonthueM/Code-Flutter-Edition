@@ -9,8 +9,8 @@ class HelloWorldPage extends StatelessWidget {
     return  ProjectLevel(
       projectLevel: "1", 
       buttonText: "Hello Page", 
-      onPressed: Navigator.push(context, MaterialPageRoute(builder: (context)=>HelloPage()));
-      )
+      projectRoute: "/p1",
+      );
   }
 }
 

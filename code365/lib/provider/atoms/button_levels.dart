@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 class ProjectLevel extends StatelessWidget {
     final String projectLevel;
     final String buttonText;
-    final GestureTapCallback onPressed;
+    final String projectRoute;
   
    ProjectLevel({
     required this.projectLevel,
     required this.buttonText,
-    required this.onPressed,
+    required this.projectRoute,
     });
     
 
@@ -19,7 +19,9 @@ class ProjectLevel extends StatelessWidget {
     return  Container(
       margin: const EdgeInsets.only(top: 15.0),
       child: ElevatedButton(
-        onPressed: onPressed,
+        onPressed: (){
+          Navigator.pushNamed(context, projectRoute);
+        },
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 15.0),
           shape: RoundedRectangleBorder(

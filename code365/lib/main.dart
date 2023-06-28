@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/day0_main.dart';
+import './screens/day0_main.dart';
+import './screens/project1_hello_world_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
+      routes: {
+        '/':(context) => const DayZeroMain(),
+        '/p1':(context) => const HelloWorldPage(),
+      },
       home: const DayZeroMain(),
     );
   }
