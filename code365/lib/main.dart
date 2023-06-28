@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
         '/':(context) => const DayZeroMain(),
         '/p1':(context) => const HelloWorldPage(),
       },
-      home: const DayZeroMain(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import './day00_switch.dart';
 import './day0000_hire_me.dart';
 import './day1_intro.dart';
-import '../provider/atoms/button_levels.dart';
+import './project1_hello_world_page.dart';
 
 class DayZeroMain extends StatelessWidget {
   const DayZeroMain({super.key});
@@ -27,10 +27,11 @@ class DayZeroMain extends StatelessWidget {
             ),
         ),
         ),
-      body:Center(
+      body:const Center(
         child: Column(
-          children: const [
+          children: [
             DayOneIntro(),
+            HelloWorldPage(),
           ],
         ), 
       ),
