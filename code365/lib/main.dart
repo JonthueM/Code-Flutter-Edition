@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/':(context) => const DayZeroMain(),
-        '/p1':(context) => const HelloWorldPage(),
+        '/p1':(context) => const HelloPage(),
       },
     );
   }
